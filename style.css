@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+p {
+    color: whitesmoke;
+    background-color: green;
+    font-size: 30px;
+}
+
+h1 {
+    color: pink;
+    background-color: royalblue;
+    font-size: 50px;
+}
+
+#liamtext {
+    float: right;
+}
+
+.siherntext {
+    float:left;
+}
+/* ids have to be unique whereas classes don't have to be; ids refered to with hashtag whereas classes are referred to with period, as above. Tags (e.g. p, h1 dont have anything). */
