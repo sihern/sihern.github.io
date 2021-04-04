@@ -21,4 +21,10 @@ h1 {
 .siherntext {
     float:left;
 }
+
+/* example: tried to change p5 canvas color to purple using following... didn't work.
+    .p5canvas {
+    background-color: p
+} */
+
 /* ids have to be unique whereas classes don't have to be; ids refered to with hashtag whereas classes are referred to with period, as above. Tags (e.g. p, h1 dont have anything). */
