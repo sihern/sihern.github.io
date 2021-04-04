@@ -1,18 +1,36 @@
 var board_size = 8;
 var canvas_size = 600;
 var square_length = canvas_size / board_size;
-
+var board_color_dark = 130;
+var board_color_light = 255;
 
 function setup() {  
     createCanvas(canvas_size, canvas_size);
     background(255, 0, 0, 128);
-    draw_board();
+    create_board();
 }
+function create_board(){
+    //draw board
+    draw_board();
+
+    //draw numbers
+    // draw_numbers();
+    //TODO: draw letters
+}
+// function draw_numbers(){
+//     for(var i = 0; i <=)
+// }
 
 function draw_board(){
-    for (var y_value = 0; y_value <= board_size * square_length - square_length; y_value += square_length) {
-        for (var x_value = 0; x_value <= board_size * square_length - square_length; x_value += square_length) {
+    for (var y_value = 0; y_value < board_size * square_length; y_value += square_length) {
+        for (var x_value = 0; x_value < board_size * square_length; x_value += square_length) {
+            if ( (x_value + y_value) % (square_length * 2) == 0) {
+                fill(board_color_light); //set fill to white
+            } else {
+                fill(board_color_dark); //set fill to black
+            }
             draw_square(x_value,y_value);
+           
         }
     }
 }
