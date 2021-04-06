@@ -8,6 +8,7 @@ function setup() {
     createCanvas(canvas_size, canvas_size);
     background(255, 0, 0, 128);
     create_board();
+    create_border();
 }
 function create_board(){
     //draw board
@@ -21,10 +22,17 @@ function create_board(){
 //     for(var i = 0; i <=)
 // }
 
+function create_border (){
+    stroke(50);
+    fill (0, 0, 0, 0);
+    rect(0, 0, canvas_size, canvas_size);
+}
+    
 function draw_board(){
-    for (var y_value = 0; y_value < board_size * square_length; y_value += square_length) {
-        for (var x_value = 0; x_value < board_size * square_length; x_value += square_length) {
-            if ( (x_value + y_value) % (square_length * 2) == 0) {
+    noStroke();
+    for (var y_value = 0; y_value < board_size; y_value++) {
+        for (var x_value = 0; x_value < board_size; x_value++) {
+            if ( (x_value + y_value) % 2 == 0) {
                 fill(board_color_light); //set fill to white
             } else {
                 fill(board_color_dark); //set fill to black
@@ -36,7 +44,7 @@ function draw_board(){
 }
 
 function draw_square(x, y) {
-    rect(x, y, square_length, square_length);
+    rect(x * square_length, y * square_length, square_length, square_length);
 }
 var frame_count = 0;
 var rate = 2;
